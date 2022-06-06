@@ -1,0 +1,56 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TfrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Produtor1: TMenuItem;
+    Cadastro1: TMenuItem;
+    Alterao1: TMenuItem;
+    Excluso1: TMenuItem;
+    Distribuidor1: TMenuItem;
+    Cadastro2: TMenuItem;
+    Alterao2: TMenuItem;
+    Excluso2: TMenuItem;
+    Produto1: TMenuItem;
+    Produto2: TMenuItem;
+    Alterao3: TMenuItem;
+    Alterao4: TMenuItem;
+    Negociao1: TMenuItem;
+    Negociao2: TMenuItem;
+    Alterao5: TMenuItem;
+    Consulta1: TMenuItem;
+    procedure Cadastro1Click(Sender: TObject);
+    procedure Alterao1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses uProdutorCadastro;
+
+procedure TfrmPrincipal.Alterao1Click(Sender: TObject);
+begin
+  frmProdutorAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Cadastro1Click(Sender: TObject);
+begin
+  frmProdutorCadastro.ShowModal;
+
+end;
+
+end.

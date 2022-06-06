@@ -1,0 +1,55 @@
+unit uNegociacaoAlteraConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList;
+
+type
+  TfrmNegociacaoAlteraConsulta = class(TForm)
+    grdDistribuidor: TDBGrid;
+    btnAlterar: TBitBtn;
+    btnExcluir: TBitBtn;
+    btnFechar: TBitBtn;
+    RadioGroup1: TRadioGroup;
+    edtConsulta: TEdit;
+    btnRelatorio: TBitBtn;
+    ImageList: TImageList;
+    procedure FormShow(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmNegociacaoAlteraConsulta: TfrmNegociacaoAlteraConsulta;
+
+implementation
+
+{$R *.dfm}
+
+uses uDM, uNegociacaoCadatro;
+
+procedure TfrmNegociacaoAlteraConsulta.btnAlterarClick(Sender: TObject);
+begin
+  DataModule1.qryNegociacao.Edit;
+
+  frmNegociacaoCadastro.cboDistribuidor.KeyValue := DataModule1.qryNegociacao.FieldByName('distribuidor').AsInteger;
+  frmNegociacaoCadastro.cboProdutor.KeyValue := DataModule1.qryNegociacao.FieldByName('produtor').AsInteger;
+  frmNegociacaoCadastro.edtData.Text := DataModule1.qryNegociacao.FieldByName('data').AsString;
+  frmNegociacaoCadastro.cboStatus.ItemIndex := DataModule1.qryNegociacao.FieldByName('status').AsInteger;
+  frmNegociacaoCadastro.edtTotal.Text := DataModule1.qryNegociacao.FieldByName('valor').AsString;
+  frmNegociacaoCadastro.ShowModal;
+end;
+
+procedure TfrmNegociacaoAlteraConsulta.FormShow(Sender: TObject);
+begin
+  if DataModule1.qryNegociacao.Active = False then
+    DataModule1.qryNegociacao.Open;
+end;
+
+end.

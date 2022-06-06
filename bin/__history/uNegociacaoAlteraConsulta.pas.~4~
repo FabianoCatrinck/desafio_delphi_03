@@ -1,0 +1,33 @@
+unit uNegociacaoAlteraConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList;
+
+type
+  TfrmNegociacaoAlteraConsulta = class(TForm)
+    grdDistribuidor: TDBGrid;
+    btnAlterar: TBitBtn;
+    btnExcluir: TBitBtn;
+    btnFechar: TBitBtn;
+    RadioGroup1: TRadioGroup;
+    Edit1: TEdit;
+    btnRelatorio: TBitBtn;
+    ImageList: TImageList;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmNegociacaoAlteraConsulta: TfrmNegociacaoAlteraConsulta;
+
+implementation
+
+{$R *.dfm}
+
+end.

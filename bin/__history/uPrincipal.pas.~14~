@@ -1,0 +1,118 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TfrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Produtor1: TMenuItem;
+    Cadastro1: TMenuItem;
+    Alterao1: TMenuItem;
+    Excluso1: TMenuItem;
+    Distribuidor1: TMenuItem;
+    Cadastro2: TMenuItem;
+    Alterao2: TMenuItem;
+    Excluso2: TMenuItem;
+    Produto1: TMenuItem;
+    Produto2: TMenuItem;
+    Alterao3: TMenuItem;
+    Alterao4: TMenuItem;
+    Negociao1: TMenuItem;
+    Negociao2: TMenuItem;
+    Alterao5: TMenuItem;
+    Consulta1: TMenuItem;
+    procedure Cadastro1Click(Sender: TObject);
+    procedure Alterao1Click(Sender: TObject);
+    procedure Excluso1Click(Sender: TObject);
+    procedure Cadastro2Click(Sender: TObject);
+    procedure Alterao2Click(Sender: TObject);
+    procedure Excluso2Click(Sender: TObject);
+    procedure Produto2Click(Sender: TObject);
+    procedure Alterao3Click(Sender: TObject);
+    procedure Alterao4Click(Sender: TObject);
+    procedure Negociao2Click(Sender: TObject);
+    procedure Alterao5Click(Sender: TObject);
+    procedure Consulta1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses uProdutorCadastro, uProdutorAlteraExclui, uNegociacaoAlteraConsulta,
+  uDistribuidorCadastro, uDistribuidorAlteraExclui, uNegociacaoCadatro,
+  uProdutoCadastro, uProdutoExcluiAltera;
+
+procedure TfrmPrincipal.Alterao1Click(Sender: TObject);
+begin
+  frmProdutorAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Alterao2Click(Sender: TObject);
+begin
+  frmDistribuidorAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Alterao3Click(Sender: TObject);
+begin
+  frmProdutoAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Alterao4Click(Sender: TObject);
+begin
+  frmProdutoAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Alterao5Click(Sender: TObject);
+begin
+  frmNegociacaoAlteraConsulta.ShowModal;
+end;
+
+procedure TfrmPrincipal.Cadastro1Click(Sender: TObject);
+begin
+  frmProdutorCadastro.ShowModal;
+
+end;
+
+procedure TfrmPrincipal.Cadastro2Click(Sender: TObject);
+begin
+  frmDistribuidorCadastro.ShowModal;
+end;
+
+procedure TfrmPrincipal.Consulta1Click(Sender: TObject);
+begin
+  frmNegociacaoAlteraConsulta.ShowModal;
+end;
+
+procedure TfrmPrincipal.Excluso1Click(Sender: TObject);
+begin
+  frmProdutorAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Excluso2Click(Sender: TObject);
+begin
+  frmDistribuidorAlteraExclui.ShowModal;
+end;
+
+procedure TfrmPrincipal.Negociao2Click(Sender: TObject);
+begin
+  frmNegociacaoCadastro.ShowModal;
+end;
+
+procedure TfrmPrincipal.Produto2Click(Sender: TObject);
+begin
+  frmProdutoCadastro.ShowModal;
+end;
+
+end.

@@ -1,0 +1,30 @@
+program ControleNegociacao;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uProdutorCadastro in 'uProdutorCadastro.pas' {frmProdutorCadastro},
+  uProdutorAlteraExclui in 'uProdutorAlteraExclui.pas' {frmProdutorAlteraExclui},
+  uDistribuidorCadastro in 'uDistribuidorCadastro.pas' {frmDistribuidorCadastro},
+  uProdutoCadastro in 'uProdutoCadastro.pas' {frmProdutoCadastro},
+  uDistribuidorAlteraExclui in 'uDistribuidorAlteraExclui.pas' {frmDistribuidorAlteraExclui},
+  uProdutoExcluiAltera in 'uProdutoExcluiAltera.pas' {frmProdutoExcluiAltera},
+  uNegociacaoCadatro in 'uNegociacaoCadatro.pas' {frmNegociacaoCadastro},
+  uNegociacaoAlteraConsulta in 'uNegociacaoAlteraConsulta.pas' {frmNegociacaoAlteraConsulta};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmProdutorCadastro, frmProdutorCadastro);
+  Application.CreateForm(TfrmProdutorAlteraExclui, frmProdutorAlteraExclui);
+  Application.CreateForm(TfrmDistribuidorCadastro, frmDistribuidorCadastro);
+  Application.CreateForm(TfrmProdutoCadastro, frmProdutoCadastro);
+  Application.CreateForm(TfrmDistribuidorAlteraExclui, frmDistribuidorAlteraExclui);
+  Application.CreateForm(TfrmProdutoExcluiAltera, frmProdutoExcluiAltera);
+  Application.CreateForm(TfrmNegociacaoCadastro, frmNegociacaoCadastro);
+  Application.CreateForm(TfrmNegociacaoAlteraConsulta, frmNegociacaoAlteraConsulta);
+  Application.Run;
+end.

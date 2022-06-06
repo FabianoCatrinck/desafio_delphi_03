@@ -1,0 +1,63 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Controle de Negocia'#231#227'o'
+  ClientHeight = 201
+  ClientWidth = 447
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 40
+    Top = 32
+    object Produtor1: TMenuItem
+      Caption = 'Produtor'
+      object Cadastro1: TMenuItem
+        Caption = 'Cadastro'
+      end
+      object Alterao1: TMenuItem
+        Caption = 'Altera'#231#227'o'
+      end
+      object Excluso1: TMenuItem
+        Caption = 'Exclus'#227'o'
+      end
+    end
+    object Distribuidor1: TMenuItem
+      Caption = 'Distribuidor'
+      object Cadastro2: TMenuItem
+        Caption = 'Cadastro'
+      end
+      object Alterao2: TMenuItem
+        Caption = 'Altera'#231#227'o'
+      end
+      object Excluso2: TMenuItem
+        Caption = 'Exclus'#227'o'
+      end
+    end
+    object Produto1: TMenuItem
+      Caption = 'Produto'
+      object Produto2: TMenuItem
+        Caption = 'Cadastro'
+      end
+      object Alterao3: TMenuItem
+        Caption = 'Altera'#231#227'o'
+      end
+      object Alterao4: TMenuItem
+        Caption = 'Exclus'#227'o'
+      end
+    end
+    object Negociao1: TMenuItem
+      Caption = 'Negocia'#231#227'o'
+      object Negociao2: TMenuItem
+        Caption = 'Manuten'#231#227'o'
+      end
+    end
+  end
+end

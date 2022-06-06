@@ -1,0 +1,20 @@
+program ControleNegociacao;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uProdutorCadastro in 'uProdutorCadastro.pas' {frmProdutorCadastro},
+  uProdutorAlteraExclui in 'uProdutorAlteraExclui.pas' {frmProdutorAlteraExclui},
+  uDistribuidorCadastro in 'uDistribuidorCadastro.pas' {frmDistribuidorCadastro};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmProdutorCadastro, frmProdutorCadastro);
+  Application.CreateForm(TfrmProdutorAlteraExclui, frmProdutorAlteraExclui);
+  Application.CreateForm(TfrmDistribuidorCadastro, frmDistribuidorCadastro);
+  Application.Run;
+end.

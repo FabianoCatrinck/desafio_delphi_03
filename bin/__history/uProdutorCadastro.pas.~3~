@@ -1,0 +1,30 @@
+unit uProdutorCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TfrmProdutorCadastro = class(TForm)
+    lblNome: TLabel;
+    lblCPFCNPJ: TLabel;
+    Edit3: TEdit;
+    edtNome: TEdit;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmProdutorCadastro: TfrmProdutorCadastro;
+
+implementation
+
+{$R *.dfm}
+
+end.
